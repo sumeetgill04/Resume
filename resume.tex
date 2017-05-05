@@ -1,0 +1,240 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{xcolor}
+%\usepackage{showframe}
+\definecolor{boldcolor}{HTML}{076CC0}
+\pagenumbering{gobble}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{}{Puneet \textcolor{boldcolor}{Gill}}{ %\urlstyle{same}\url{puneetgill.com} \\
+\href{mailto:puneet.gill05@gmail.com}{puneet.gill05@gmail.com} | 647.470.6984
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.31\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of Waterloo}
+\descript{B.A.Sc. in Electrical Engineering}
+\location{Expected June 2018}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+Cooperative and Adaptive Algorithms \\
+Computer Networks \\
+Computer Security \\
+Compilers \\
+Algorithm Design and Analysis \\
+Embedded Microprocessor Systems \\
+Algorithms and Data Structures \\
+Digital Computers \\
+Communication Theory \\
+Analog Control Systems
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ASSIGNMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Assignments}
+\subsection{Peer-to-Peer content management system}
+Supported functions of adding and removal of peers and content to the peers while maintaining a load balancing condition.\\
+
+\subsection{Music Player}
+Implemented a music player on \textcolor{boldcolor}{\textbf{Altera DE2 FPGA}} to play .wav files in different play modes (half speed, double speed, reverse, one channel delayed).\\
+
+\subsection{Computer Security Labs}
+Implemented various software vulnerability attacks.
+
+\subsection{A.I. Algorithms}
+Implemented genetic algorithm, ant colony optimization and particle swarm optimization for designing a PID controller, TSP \& function optimization.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+Java \textbullet{} C/C++ \textbullet{} Python \textbullet{} Go\\
+Shell \textbullet{} JavaScript \textbullet{} Clojure\\
+Matlab \textbullet{} ARM Assembly \textbullet{} VHDL\\
+Ruby \textbullet{} \LaTeX \textbullet{} CSS
+\sectionsep
+
+\subsection{Technologies}
+Docker \textbullet{} Kubernetes \textbullet{} git \textbullet{} gdb \\
+Redis \textbullet{} PostgreSQL
+
+\section{Links}
+\subsection{LinkedIn:}
+ca.linkedin.com/in/puneetgill05 \\
+\subsection{GitHub:}
+github.com/puneetgill05/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Amazon Inc.}
+\descript{| SDE Intern }
+\duration{Sep – Dec 2016 | Seattle}
+\common{Java, Spring, Ruby, DynamoDB }
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+	\item Worked on implementing a customer specific pricing for Amazon business customers.
+	\item Wrote a recommender strategy service to display the widgets on page load within \textcolor{boldcolor}{\textbf{250 ms}} based on customer's location, purchase history and industry.
+	\item Ran experiments for amazon business suggestions and multiscoping for products.
+\end{tightemize}
+\sectionsep
+
+
+\runsubsection{WeMesh}
+\descript{| Backend Engineer Intern }
+\duration{Sep – Dec 2015 | Waterloo}
+\common{Node.js, Go, Apache Kafka, Kubernetes, Zookeeper, Docker }
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Worked on implementing a custom messaging protocol to support large number of users.
+\item Wrote a library for sending GCM XMPP notifications in Java with a throughput of \textcolor{boldcolor}{\textbf{30K messages/second}}.
+\item Wrote a bot in Go to test the scalability of the app by supporting all features including VoIP, chat and voting.
+\item Reduced latency in user join times due to large number of users in a single chat from \textcolor{boldcolor}{\textbf{8 seconds}} to \textcolor{boldcolor}{\textbf{30 milli seconds}}.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{WeMesh}
+\descript{| Android Developer Intern }
+\duration{May – Aug 2015 | Waterloo}
+\common{Android, Retrofit, C, Python, Exoplayer }
+\begin{tightemize}
+\item Worked in the Android team to make a video syncing app (\textcolor{boldcolor}{\textbf{100K}} - \textcolor{boldcolor}{\textbf{500K}} downloads).
+\item Worked on building core features of the app: sync engine, video voting \& VoIP client.
+\item Worked on echo cancellation during VoIP to improve VoIP quality across devices.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Pivotal Labs}
+\descript{| Agile Engineer}
+\duration{Sep – Dec 2014 | Toronto}
+\common{Android, Robolectric, AngularJS, jQuery, Java, MongoDB }
+\begin{tightemize}
+\item Worked on the multi user chat and indoor mapping for Carnival Cruise android app (\textcolor{boldcolor}{\textbf{100K}} -\textcolor{boldcolor}{\textbf{500K}} downloads) and used \textcolor{boldcolor}{\textbf{Robolectric}} for tests.
+\item Worked on the server side for an internal app for tracking employees (~400) in the office using iBeacons.
+\item Created a web app for allocating seats to different projects for all Pivotal Labs offices.
+\end{tightemize}
+\sectionsep
+
+
+\runsubsection{Citigroup Inc.}
+\descript{| Software Developer Intern}
+\duration{Jan – Apr 2014 | Toronto}
+\common{Java Spring Framework, AVS, Openlink, OracleDB }
+\begin{tightemize}
+	\item Developed an automated system to update the Commodities database with the portfolio information from the accounting database in real time.
+	\item Developed commodities financial control downstream feeds. Optimized the commodities end of day sequences to achieve \textcolor{boldcolor}{\textbf{30\%}} runtime performance gains.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Machine Learning algorithms to detect Handwriting}
+\descript{| python} \\
+Implemented and compared various machine learning algorithms such as back-propagation, stochastic gradient descent and convoluted neural networks for detecting handwriting
+\sectionsep
+
+\runsubsection{Different Techniques to blur and deblur an image}
+\descript{| MATLAB} \\
+Implemented blurring and deblurring techniques to blur and deblur an image. Used mean and gaussian filters to blur and inverse and wiener filters to deblur.\\
+\sectionsep
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
